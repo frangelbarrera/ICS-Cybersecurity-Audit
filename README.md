@@ -4,6 +4,18 @@ Industrial Control Systems Security Methodology & Best Practices
 
 by [Frangel Barrera](https://github.com/frangelbarrera) | Industrial Cybersecurity Researcher
 
+┌─────────────────────────────────────────────────────────────┐
+│  🏭  ICS CYBERSECURITY AUDIT FRAMEWORK  🛡️                │
+├─────────────────────────────────────────────────────────────┤
+│  [🔍] SCOPE  →  [📊] DISCOVER  →  [🔧] HARDEN  →  [✅]   │
+│                        ↓                                    │
+│                    [📋] REPORT                              │
+├─────────────────────────────────────────────────────────────┤
+│  L0/1 🔒  L2 🔒  L3 🔒  DMZ 🛡️  Enterprise 🔐            │
+├─────────────────────────────────────────────────────────────┤
+│  IEC 62443 | NIST SP 800-82 | ETHICAL | NON-INTRUSIVE     │
+└─────────────────────────────────────────────────────────────┘
+
 Creating safer industrial environments through ethical research and proven methodologies
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
