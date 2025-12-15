@@ -9,7 +9,7 @@ Creating safer industrial environments through ethical research and proven metho
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg)](https://www.isa.org/isa-iec-62443)
 [![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg)](https://csrc.nist.gov/publications/detail/sp/800-82/rev-3/final)
-[![Last Updated](https://img.shields.io/badge/Updated-December%202024-brightgreen.svg)]
+[![Last Updated](https://img.shields.io/badge/Updated-December%202025-brightgreen.svg)]
 
 ---
 
