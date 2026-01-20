@@ -1,4 +1,4 @@
-🛡️ ICS Cybersecurity Audit Framework
+## ICS Cybersecurity Audit Framework
 
 Industrial Control Systems Security Methodology & Best Practices
 
@@ -13,7 +13,7 @@ Creating safer industrial environments through ethical research and proven metho
 
 ---
 
-📋 Repository Purpose
+ Repository Purpose
 
 This information repository serves as a comprehensive methodology guide for cybersecurity professionals conducting authorized security assessments of Industrial Control Systems (ICS) and Operational Technology (OT) environments. It focuses exclusively on defensive security practices, audit procedures, and risk mitigation strategies aligned with international industrial standards.
 
@@ -21,7 +21,7 @@ Core Value: Transforming theoretical OT security knowledge into actionable, audi
 
 ---
 
-🎯 Scope & Applicability
+ Scope & Applicability
 
 This framework applies to Purdue Model Levels 0-3 and addresses:
 
@@ -35,7 +35,7 @@ Applicable Industries: Manufacturing, Energy, Water Treatment, Oil & Gas, Chemic
 
 ---
 
-🔬 Audit Methodology: 5-Phase Approach
+ Audit Methodology: 5-Phase Approach
 
 Phase 1: Documentation & Scope Definition
 
@@ -93,7 +93,7 @@ Templates Included:
 
 ---
 
-📚 Key Framework Components
+ Key Framework Components
 
 1. OT Protocol Security Guides
 
@@ -163,7 +163,7 @@ Vendor Advisories Tracking:
 
 ---
 
-🔒 Security Architecture Patterns
+ Security Architecture Patterns
 
 Zero Trust OT (ZT-OT) Model
 
@@ -194,7 +194,7 @@ iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "12&0xFFFF=0x06" -j DROP
 
 ---
 
-📖 Compliance Mapping
+ Compliance Mapping
 
 IEC 62443-3-3 System Security Requirements
 
@@ -213,7 +213,7 @@ NIST SP 800-82r3 Alignment
 
 ---
 
-🎓 Professional Development & Certifications
+ Professional Development & Certifications
 
 Recommended Certification Path
 
@@ -229,7 +229,7 @@ Training Resources
 
 ---
 
-⚠️ Ethical Use & Legal Framework
+ Ethical Use & Legal Framework
 
 Mandatory Requirements Before Use
 
@@ -241,7 +241,7 @@ Mandatory Requirements Before Use
 
 Prohibited Activities
 
-❌ NEVER:
+ NEVER:
 - Test on production systems without outage windows
 - Modify process variables or logic
 - Cause denial-of-service conditions
@@ -257,7 +257,7 @@ If vulnerabilities are discovered:
 
 ---
 
-📊 Continuous Improvement & Community
+ Continuous Improvement & Community
 
 Contributing Guidelines
 
@@ -280,7 +280,7 @@ Framework Versioning
 
 ---
 
-📚 References & Research Base
+ References & Research Base
 
 Academic & Standards
 - ISA/IEC 62443 Series (All Parts)
@@ -302,7 +302,7 @@ Threat Intelligence
 
 ---
 
-🙏 Acknowledgments
+ Acknowledgments
 
 This framework synthesizes knowledge from:
 - ISA Global Cybersecurity Alliance
