@@ -2,14 +2,26 @@
 
 Industrial Control Systems Security Methodology & Best Practices
 
-by [Frangel Barrera](https://github.com/frangelbarrera) | Industrial Cybersecurity Researcher
+by [Frangel Barrera](https://github.com/frangelbarrera ) | Industrial Cybersecurity Researcher
 
 Creating safer industrial environments through ethical research and proven methodologies
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg)](https://www.isa.org/isa-iec-62443)
-[![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg)](https://csrc.nist.gov/publications/detail/sp/800-82/rev-3/final)
-[![Last Updated](https://img.shields.io/badge/Updated-December%202025-brightgreen.svg)]
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg )](https://creativecommons.org/licenses/by-nc-sa/4.0/ )
+[![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg )](https://www.isa.org/isa-iec-62443 )
+[![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg )](https://csrc.nist.gov/publications/detail/sp/800-82/rev-3/final )
+[![Last Updated](https://img.shields.io/badge/Updated-February%202026-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit )
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/pulls )
+
+---
+
+### 📑 Table of Contents
+- [Repository Purpose](#-repository-purpose)
+- [Scope & Applicability](#-scope--applicability)
+- [Audit Methodology](#-audit-methodology-5-phase-approach)
+- [Key Framework Components](#-key-framework-components)
+- [Security Architecture Patterns](#-security-architecture-patterns)
+- [Compliance Mapping](#-compliance-mapping)
+- [Ethical Use & Legal Framework](#-ethical-use--legal-framework)
 
 ---
 
@@ -165,14 +177,25 @@ Vendor Advisories Tracking:
 
  Security Architecture Patterns
 
-Zero Trust OT (ZT-OT) Model
+#### Zero Trust OT (ZT-OT) Model
+```mermaid
+graph LR
+    subgraph IT_Zone [Corporate IT]
+        MFA[Multi-Factor Auth]
+    end
+    subgraph IDMZ_Zone [Industrial DMZ]
+        Diode[Data Diode / Proxy]
+    end
+    subgraph OT_Supervision [OT Supervision]
+        Micro[Micro-segmentation]
+    end
+    subgraph OT_Control [OT Control]
+        Auth[Device Auth]
+    end
+    IT_Zone --> IDMZ_Zone
+    IDMZ_Zone --> OT_Supervision
+    OT_Supervision --> OT_Control
 
-```
-[Corporate IT] → [IDMZ] → [OT Supervision] → [OT Control]
-     ↓              ↓              ↓                ↓
-   MFA          Unidirectional   Micro-seg       Device-level
-                Data Diode      VLANs/ACLs     Authentication
-```
 
 Implementation Guide:
 - Design principles for Industrial DMZ (IDMZ)
@@ -198,12 +221,12 @@ iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "12&0xFFFF=0x06" -j DROP
 
 IEC 62443-3-3 System Security Requirements
 
-Requirement	Framework Section	Audit Evidence	
-SR 1.1 - Identification & Authentication	Phase 3	User account matrix, password policy	
-SR 2.1 - Authorization	Phase 3	ACL documentation, role definitions	
-SR 3.1 - Communication Integrity	Phase 4	TLS/SSH configuration, certificate audit	
-SR 4.1 - Security Event Logging	Phase 5	SIEM configuration, log retention policy	
-SR 5.1 - Network Segmentation	Architecture	Network diagrams, firewall rules	
+| Requirement | Framework Section | Audit Evidence |
+| :--- | :--- | :--- |
+| **SR 1.1 - Identification** | Phase 3 | User account matrix, password policy |
+| **SR 2.1 - Authorization** | Phase 3 | ACL documentation, role definitions |
+| **SR 3.1 - Comm. Integrity**| Phase 4 | TLS/SSH configuration, certificate audit |
+| **SR 5.1 - Segmentation** | Architecture | Network diagrams, firewall rules |
 
 NIST SP 800-82r3 Alignment
 
@@ -239,14 +262,13 @@ Mandatory Requirements Before Use
 4. Change Control: All tests must be scheduled during maintenance windows
 5. Emergency Stop: Maintain immediate ability to halt all audit activities
 
-Prohibited Activities
+**Prohibited Activities:**
 
- NEVER:
-- Test on production systems without outage windows
-- Modify process variables or logic
-- Cause denial-of-service conditions
-- Disclose findings without client approval
-- Share vendor vulnerabilities before patch availability
+- ❌ **NEVER** test on production systems without outage windows.
+- ❌ **NEVER** modify process variables or logic.
+- ❌ **NEVER** cause denial-of-service (DoS) conditions.
+- ❌ **NEVER** disclose findings without client approval.
+
 
 Responsible Disclosure Commitment
 
