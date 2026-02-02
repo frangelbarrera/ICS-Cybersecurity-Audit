@@ -312,6 +312,17 @@ Framework Versioning
 
 ---
 
+### Recommended Toolset
+| Category | Tool | Purpose |
+| :--- | :--- | :--- |
+| **Discovery** | [NetworkMiner](https://www.netresec.com/?page=NetworkMiner ) | Passive OT asset identification |
+| **Analysis** | [Wireshark](https://www.wireshark.org/ ) | Industrial protocol deep packet inspection |
+| **Hardening** | [GrassMarlin](https://github.com/nsacyber/GRASSMARLIN ) | Snapshot of IP network topology |
+| **Auditing** | [CSET®](https://github.com/cisagov/cset ) | NIST/IEC 62443 compliance self-assessment |
+
+
+---
+
  References & Research Base
 
 Academic & Standards
