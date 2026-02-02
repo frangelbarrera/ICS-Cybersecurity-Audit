@@ -186,6 +186,14 @@ Vendor Advisories Tracking:
 
 ---
 
+### 🔍 OT-Specific Vulnerability Research
+To stay ahead of emerging threats, this framework integrates data from:
+- **CISA ICS Advisories:** [Latest Alerts](https://www.cisa.gov/news-events/cybersecurity-advisories?f%5B0%5D=advisory_type%3A93 )
+- **MITRE ATT&CK® for ICS:** [Matrix for Industrial Control Systems](https://attack.mitre.org/matrices/ics/ )
+- **Vendor Portals:** Direct links to Siemens, Rockwell, and Schneider security advisories are included in the `/docs/vendors/` directory.
+
+---
+
  Security Architecture Patterns
 
 #### Zero Trust OT (ZT-OT) Model
