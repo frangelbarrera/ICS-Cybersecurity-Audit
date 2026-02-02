@@ -321,14 +321,20 @@ Framework Versioning
 
 ---
 
-### Recommended Toolset
+### 🛠 Comprehensive Audit Toolset
+
 | Category | Tool | Purpose |
 | :--- | :--- | :--- |
-| **Discovery** | [NetworkMiner](https://www.netresec.com/?page=NetworkMiner ) | Passive OT asset identification |
-| **Analysis** | [Wireshark](https://www.wireshark.org/ ) | Industrial protocol deep packet inspection |
-| **Hardening** | [GrassMarlin](https://github.com/nsacyber/GRASSMARLIN ) | Snapshot of IP network topology |
-| **Auditing** | [CSET®](https://github.com/cisagov/cset ) | NIST/IEC 62443 compliance self-assessment |
-
+| **Passive Discovery** | [NetworkMiner](https://www.netresec.com/?page=NetworkMiner ) | Passive OT asset identification and metadata extraction |
+| **Passive Discovery** | [GrassMarlin](https://github.com/nsacyber/GRASSMARLIN ) | Passive network topology mapping and inventory |
+| **Traffic Analysis** | [Wireshark](https://www.wireshark.org/ ) | Deep Packet Inspection (DPI) for S7Comm, Modbus, Ethernet/IP |
+| **Traffic Analysis** | [Brim / Zeek](https://www.brimdata.io/ ) | Large-scale PCAP analysis and OT log generation |
+| **Active Discovery** | [Nmap](https://nmap.org/ ) | Targeted scanning using NSE scripts (e.g., `s7-info`, `modbus-discover`) |
+| **PLC Analysis** | [Snap7](http://snap7.sourceforge.net/ ) | Multi-platform Ethernet communication suite for Siemens S7 |
+| **PLC Analysis** | [ISF (ICS Exploitation Framework)](https://github.com/dark-lbp/isf ) | Protocol-specific testing (Exploitation framework for industrial protocols) |
+| **Vulnerability Mgmt** | [OpenVAS](https://www.openvas.org/ ) | Open-source vulnerability scanner (requires careful OT tuning) |
+| **Compliance** | [CSET®](https://github.com/cisagov/cset ) | CISA's official tool for NIST/IEC 62443 compliance assessments |
+| **Simulation** | [Modbus Pal](http://modbuspal.sourceforge.net/ ) | Java-based Modbus slave simulator for testing without live PLCs |
 
 ---
 
