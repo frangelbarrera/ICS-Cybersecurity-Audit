@@ -3,6 +3,8 @@
 
 ---
 
+![](docs/images/1.jpg)
+
 Industrial Control Systems Security Methodology & Best Practices
 
 by [Frangel Barrera](https://github.com/frangelbarrera ) | Industrial Cybersecurity Researcher
