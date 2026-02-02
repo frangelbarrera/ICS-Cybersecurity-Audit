@@ -17,19 +17,6 @@ Creating safer industrial environments through ethical research and proven metho
 
 ---
 
-### 📑 Table of Contents
-- [Repository Purpose](#repository-purpose)
-- [Scope & Applicability](#scope--applicability)
-- [Audit Methodology: 5-Phase Approach](#audit-methodology-5-phase-approach)
-- [Key Framework Components](#key-framework-components)
-- [Security Architecture Patterns](#security-architecture-patterns)
-- [Compliance Mapping](#compliance-mapping)
-- [Professional Development & Certifications](#professional-development--certifications)
-- [Ethical Use & Legal Framework](#ethical-use--legal-framework)
-
-
----
-
  Repository Purpose
 
 This information repository serves as a comprehensive methodology guide for cybersecurity professionals conducting authorized security assessments of Industrial Control Systems (ICS) and Operational Technology (OT) environments. It focuses exclusively on defensive security practices, audit procedures, and risk mitigation strategies aligned with international industrial standards.
