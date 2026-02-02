@@ -1,4 +1,7 @@
-## ICS Cybersecurity Audit Framework
+
+### ICS Cybersecurity Audit Framework
+
+---
 
 Industrial Control Systems Security Methodology & Best Practices
 
