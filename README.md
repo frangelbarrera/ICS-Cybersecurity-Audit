@@ -21,6 +21,7 @@ Creating safer industrial environments through ethical research and proven metho
 - [Key Framework Components](#-key-framework-components)
 - [Security Architecture Patterns](#-security-architecture-patterns)
 - [Compliance Mapping](#-compliance-mapping)
+- [Professional Development](#-professional-development--certifications)
 - [Ethical Use & Legal Framework](#-ethical-use--legal-framework)
 
 ---
