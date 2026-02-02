@@ -129,6 +129,8 @@ EtherNet/IP	CIP protocol vulnerabilities	Use CIP Security, device-level authenti
 OPC UA	Certificate management complexity	Implement proper PKI, disable anonymous access	
 PROFINET	LLDP information leakage	Disable unused features, control broadcast domains	
 
+---
+
 #### 🔍 Common OT Protocol Weaknesses
 While industrial protocols are designed for reliability and real-time performance, most lack native security features. During an audit, focus on these common architectural flaws:
 
@@ -142,6 +144,7 @@ While industrial protocols are designed for reliability and real-time performanc
 
 > 🛡️ **Audit Strategy:** When documenting these weaknesses, always map them to the **Purdue Model Level**. A vulnerability at Level 1 (Direct Control) carries a significantly higher safety risk than at Level 3 (Operations).
 
+---
 
 2. Hardening Baselines
 
