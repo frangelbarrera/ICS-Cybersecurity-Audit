@@ -195,7 +195,7 @@ graph LR
     IT_Zone --> IDMZ_Zone
     IDMZ_Zone --> OT_Supervision
     OT_Supervision --> OT_Control
-
+```
 
 Implementation Guide:
 - Design principles for Industrial DMZ (IDMZ)
