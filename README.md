@@ -34,6 +34,15 @@ Core Value: Transforming theoretical OT security knowledge into actionable, audi
 
 ---
 
+### Quick Start Guide
+To begin using this framework in a professional engagement:
+1. **Legal Prep:** Download and customize the `AUDIT_AUTHORIZATION_TEMPLATE.md` from the `/docs/legal/` directory.
+2. **Asset Inventory:** Use the Phase 1 checklist to document Level 1-3 assets.
+3. **Passive Baseline:** Deploy a network TAP and use the Wireshark profiles provided in the `/tools/` section.
+
+
+---
+
  Scope & Applicability
 
 This framework applies to Purdue Model Levels 0-3 and addresses:
