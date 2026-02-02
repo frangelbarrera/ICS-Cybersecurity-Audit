@@ -129,6 +129,20 @@ EtherNet/IP	CIP protocol vulnerabilities	Use CIP Security, device-level authenti
 OPC UA	Certificate management complexity	Implement proper PKI, disable anonymous access	
 PROFINET	LLDP information leakage	Disable unused features, control broadcast domains	
 
+#### 🔍 Common OT Protocol Weaknesses
+While industrial protocols are designed for reliability and real-time performance, most lack native security features. During an audit, focus on these common architectural flaws:
+
+| Protocol | Primary Vulnerability | Audit Finding Impact |
+| :--- | :--- | :--- |
+| **Modbus TCP** | **Lack of Authentication** | Any device on the network can send "Write Single Coil" commands to stop a process. |
+| **S7Comm** | **Cleartext Communication** | Attackers can capture traffic to extract PLC passwords or inject rogue PDU packets. |
+| **EtherNet/IP** | **Unauthenticated CIP** | CIP objects can be manipulated to change device configurations or force I/O states. |
+| **PROFINET** | **DCP Exploitation** | Discovery and Configuration Protocol (DCP) can be used to reset device names or IP addresses, causing a DoS. |
+| **BACnet/IP** | **No Source Validation** | Vulnerable to spoofing and "Who-Is" broadcast storms that can overwhelm low-bandwidth controllers. |
+
+> 🛡️ **Audit Strategy:** When documenting these weaknesses, always map them to the **Purdue Model Level**. A vulnerability at Level 1 (Direct Control) carries a significantly higher safety risk than at Level 3 (Operations).
+
+
 2. Hardening Baselines
 
 PLC Security Configuration Guides:
