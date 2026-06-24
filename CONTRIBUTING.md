@@ -37,4 +37,3 @@ Open an issue with:
 ## Security Vulnerability Reporting
 
 If you discover a vulnerability in an ICS/OT product referenced in this guide, do NOT report it here. Report it directly to the vendor and to CISA ICS-CERT following responsible disclosure practices.
-
