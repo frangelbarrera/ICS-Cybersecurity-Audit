@@ -11,11 +11,11 @@ by [Frangel Barrera](https://github.com/frangelbarrera ) | Industrial Cybersecur
 
 Creating safer industrial environments through ethical research and proven methodologies
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg )](https://creativecommons.org/licenses/by-nc-sa/4.0/ )
-[![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg )](https://www.isa.org/ )
-[![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg )](https://csrc.nist.gov/pubs/sp/800/82/r3/final )
-[![Last Updated](https://img.shields.io/badge/Updated-June%202026-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit )
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/pulls )
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg)](https://www.isa.org/)
+[![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg)](https://csrc.nist.gov/pubs/sp/800/82/r3/final)
+[![Last Updated](https://img.shields.io/badge/Updated-June%202026-brightgreen.svg)](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/pulls)
 
 ---
 

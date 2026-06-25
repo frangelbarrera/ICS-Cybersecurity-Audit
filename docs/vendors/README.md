@@ -41,7 +41,7 @@ This directory indexes official security advisory portals and hardening guides f
 | :--- | :--- | :--- |
 | Emerson Cybersecurity | https://www.emerson.com/en-us/automation/cybersecurity | DeltaV and Ovation DCS security resources |
 | GE Vernova (Grid Solutions) | https://www.gevernova.com/grid-solutions/ | Protection relays, RTUs, and substation automation |
-| Honeywell Process Solutions | https://process.honeywell.com/us/en/ Cybersecurity | Experion PKS and Safety Manager security advisories |
+| Honeywell Process Solutions | https://process.honeywell.com/us/en/cybersecurity | Experion PKS and Safety Manager security advisories. Note: may be geo-restricted in some regions. |
 
 #### Yokogawa / ABB / Mitsubishi Electric
 
