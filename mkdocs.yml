@@ -6,6 +6,8 @@ site_url: https://frangelbarrera.github.io/ICS-Cybersecurity-Audit/
 repo_name: frangelbarrera/ICS-Cybersecurity-Audit
 repo_url: https://github.com/frangelbarrera/ICS-Cybersecurity-Audit
 
+docs_dir: docs
+
 theme:
   name: material
   palette:
@@ -43,34 +45,33 @@ markdown_extensions:
   - md_in_html
   - tables
   - fenced_code
-  - codehilite
   - footnotes
   - toc:
       permalink: true
 
 nav:
-  - Home: README.md
+  - Home: index.md
   - Methodology:
-    - Phase 1 - Documentation & Scope: docs/checklists/phase1-documentation-scope.md
-    - Phase 2 - Passive Discovery: docs/checklists/phase2-passive-discovery.md
-    - Phase 3 - Hardening Review: docs/checklists/phase3-hardening-review.md
-    - Phase 4 - Controlled Validation: docs/checklists/phase4-controlled-validation.md
-    - Phase 5 - Reporting & Remediation: docs/checklists/phase5-reporting-remediation.md
+    - Phase 1 - Documentation & Scope: checklists/phase1-documentation-scope.md
+    - Phase 2 - Passive Discovery: checklists/phase2-passive-discovery.md
+    - Phase 3 - Hardening Review: checklists/phase3-hardening-review.md
+    - Phase 4 - Controlled Validation: checklists/phase4-controlled-validation.md
+    - Phase 5 - Reporting & Remediation: checklists/phase5-reporting-remediation.md
   - MITRE ATT&CK:
-    - ICS Mapping: docs/mitre-attack-ics-mapping.md
+    - ICS Mapping: mitre-attack-ics-mapping.md
   - Case Studies:
-    - Overview: docs/case-studies/README.md
-    - Stuxnet (2010): docs/case-studies/stuxnet-2010.md
-    - Ukraine Power Grid (2015): docs/case-studies/ukraine-power-grid-2015.md
-    - TRITON/TRISIS (2017): docs/case-studies/triton-trisis-2017.md
-    - Colonial Pipeline (2021): docs/case-studies/colonial-pipeline-2021.md
-    - Oldsmar Water (2021): docs/case-studies/oldsmar-water-2021.md
+    - Overview: case-studies/README.md
+    - Stuxnet (2010): case-studies/stuxnet-2010.md
+    - Ukraine Power Grid (2015): case-studies/ukraine-power-grid-2015.md
+    - TRITON/TRISIS (2017): case-studies/triton-trisis-2017.md
+    - Colonial Pipeline (2021): case-studies/colonial-pipeline-2021.md
+    - Oldsmar Water (2021): case-studies/oldsmar-water-2021.md
   - Templates:
-    - Audit Authorization: docs/legal/AUDIT_AUTHORIZATION_TEMPLATE.md
-    - Authorization Scope: docs/legal/AUTHORIZATION_SCOPE.md
-    - Executive Summary: docs/templates/executive-summary-template.md
-    - Technical Findings: docs/templates/technical-findings-template.md
-    - Remediation Roadmap: docs/templates/remediation-roadmap-template.md
+    - Audit Authorization: legal/AUDIT_AUTHORIZATION_TEMPLATE.md
+    - Authorization Scope: legal/AUTHORIZATION_SCOPE.md
+    - Executive Summary: templates/executive-summary-template.md
+    - Technical Findings: templates/technical-findings-template.md
+    - Remediation Roadmap: templates/remediation-roadmap-template.md
   - Resources:
-    - Vendor Advisories: docs/vendors/README.md
-    - Tools: tools/README.md
+    - Vendor Advisories: vendors/README.md
+    - Tools: tools.md

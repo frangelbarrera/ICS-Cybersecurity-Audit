@@ -4,7 +4,7 @@
 
 ### Purpose
 
-This directory contains detailed analyses of major ICS/OT cyber incidents. Each case study examines the attack through the lens of the [MITRE ATT&CK for ICS framework](../mitre-attack-ics-mapping.md) and maps how the [5-phase audit methodology](../../README.md) would have detected or prevented the attack.
+This directory contains detailed analyses of major ICS/OT cyber incidents. Each case study examines the attack through the lens of the [MITRE ATT&CK for ICS framework](../mitre-attack-ics-mapping.md) and maps how the [5-phase audit methodology](../index.md) would have detected or prevented the attack.
 
 Studying real incidents is essential for OT security practitioners because:
 
