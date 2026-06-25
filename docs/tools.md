@@ -41,7 +41,7 @@ This directory is under active development. The following materials are planned 
 
 ### Tool Categories Referenced in the Framework
 
-The following third-party tools are referenced throughout the framework. Links are provided in the main [README.md](../index.md). This directory will contain companion configurations and integration guidance:
+The following third-party tools are referenced throughout the framework. Links are provided in the main [README.md](index.md). This directory will contain companion configurations and integration guidance:
 
 | Category | Tools | Companion Content Planned |
 | :--- | :--- | :--- |
@@ -73,7 +73,7 @@ If you would like to contribute a tool, script, or configuration to this directo
 2. Include clear comments and safety warnings in the code.
 3. Provide a README or header documentation explaining usage, prerequisites, and limitations.
 4. Test against offline/replica hardware before submission.
-5. Submit via Pull Request following the [CONTRIBUTING.md](../../CONTRIBUTING.md) process.
+5. Submit via Pull Request following the [CONTRIBUTING.md](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/blob/main/CONTRIBUTING.md) process.
 
 No tool should be capable of causing harm to a production system when used as documented.
 

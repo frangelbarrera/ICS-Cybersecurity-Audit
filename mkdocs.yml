@@ -6,8 +6,6 @@ site_url: https://frangelbarrera.github.io/ICS-Cybersecurity-Audit/
 repo_name: frangelbarrera/ICS-Cybersecurity-Audit
 repo_url: https://github.com/frangelbarrera/ICS-Cybersecurity-Audit
 
-docs_dir: docs
-
 theme:
   name: material
   palette:

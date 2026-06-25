@@ -3,7 +3,7 @@
 
 ---
 
-![](docs/images/1.png)
+![](images/1.png)
 
 Industrial Control Systems Security Methodology & Best Practices
 

@@ -6,7 +6,7 @@
 
 MITRE ATT&CK for ICS is a knowledge base of adversary tactics, techniques, and procedures (TTPs) targeting industrial control systems. Unlike the enterprise ATT&CK matrix, the ICS matrix focuses on the unique operational realities of OT environments: safety-critical processes, real-time constraints, proprietary protocols, and the Purdue Model architecture.
 
-This document maps every technique in the MITRE ATT&CK for ICS matrix to the 5-phase audit methodology defined in the [ICS-Cybersecurity-Audit Framework](../index.md). Each mapping identifies:
+This document maps every technique in the MITRE ATT&CK for ICS matrix to the 5-phase audit methodology defined in the [ICS-Cybersecurity-Audit Framework](index.md). Each mapping identifies:
 
 - **Which audit phase** provides the best detection opportunity
 - **Which IEC 62443-3-3 Security Requirement (SR)** would prevent, detect, or mitigate the technique
