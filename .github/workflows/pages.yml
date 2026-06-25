@@ -32,6 +32,11 @@ jobs:
         run: |
           cp README.md docs/index.md
           cp tools/README.md docs/tools.md
+          # Fix paths: root README references docs/images/ but MkDocs uses images/
+          sed -i 's|docs/images/|images/|g' docs/index.md
+          # Fix relative links from tools/README.md that don't work inside docs/
+          sed -i 's|](../../README.md)|](index.md)|g' docs/tools.md
+          sed -i 's|](../../CONTRIBUTING.md)|](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/blob/main/CONTRIBUTING.md)|g' docs/tools.md
 
       - name: Build site
         run: mkdocs build --strict
