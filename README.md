@@ -5,7 +5,7 @@
 
 ![](docs/images/1.png)
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg)](https://www.isa.org/)
 [![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg)](https://csrc.nist.gov/pubs/sp/800/82/r3/final)
 [![Last Updated](https://img.shields.io/badge/Updated-June%202026-brightgreen.svg)](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit)
@@ -39,11 +39,12 @@ To begin using this framework in a professional engagement:
 
 This framework applies to Purdue Model Levels 0-3 and addresses:
 
-System Layer	Components	Security Focus Area	
-Level 3 - Site Operations	SCADA Servers, HMIs, Historians	Secure architecture, access control, patch management	
-Level 2 - Area Supervision	Plant-floor HMIs, engineering workstations	Application security, secure remote access	
-Level 1 - Basic Control	PLCs, RTUs, DCS controllers	Firmware integrity, protocol hardening	
-Level 0 - Process	Sensors, actuators, drives	Physical security, secure commissioning	
+System Layer | Components | Security Focus Area
+| :--- | :--- | :--- |
+| Level 3 - Site Operations | SCADA Servers, HMIs, Historians | Secure architecture, access control, patch management |
+| Level 2 - Area Supervision | Plant-floor HMIs, engineering workstations | Application security, secure remote access |
+| Level 1 - Basic Control | PLCs, RTUs, DCS controllers | Firmware integrity, protocol hardening |
+| Level 0 - Process | Sensors, actuators, drives | Physical security, secure commissioning |
 
 Applicable Industries: Manufacturing, Energy, Water Treatment, Oil & Gas, Chemical Processing, Critical Infrastructure.
 
@@ -113,13 +114,14 @@ Templates Included:
 
 Detailed security analysis for industrial protocols:
 
-Protocol	Security Considerations	Hardening Steps	
-Modbus TCP	No authentication, plaintext	Implement TCP wrappers, network segmentation	
-S7Comm (Siemens)	Default ports, version fingerprinting	Enable Access Protection (S7-1500), change port 102	
-EtherNet/IP	CIP protocol vulnerabilities	Use CIP Security, device-level authentication	
-OPC UA	Certificate management complexity	Implement proper PKI, disable anonymous access	
-PROFINET	LLDP information leakage	Disable unused features, control broadcast domains	
-BACnet/IP	No authentication, no encryption, UDP 47808	Implement BACnet/SC (Secure Connect), VLAN segmentation, disable BBMD on untrusted interfaces	
+Protocol | Security Considerations | Hardening Steps
+| :--- | :--- | :--- |
+| Modbus TCP | No authentication, plaintext | Implement TCP wrappers, network segmentation |
+| S7Comm (Siemens) | Default ports, version fingerprinting | Enable Access Protection (S7-1500), change port 102 |
+| EtherNet/IP | CIP protocol vulnerabilities | Use CIP Security, device-level authentication |
+| OPC UA | Certificate management complexity | Implement proper PKI, disable anonymous access |
+| PROFINET | LLDP information leakage | Disable unused features, control broadcast domains |
+| BACnet/IP | No authentication, no encryption, UDP 47808 | Implement BACnet/SC (Secure Connect), VLAN segmentation, disable BBMD on untrusted interfaces |
 
 ---
 

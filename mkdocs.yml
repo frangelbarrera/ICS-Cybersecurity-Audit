@@ -67,9 +67,9 @@ nav:
   - Templates:
     - Audit Authorization: legal/AUDIT_AUTHORIZATION_TEMPLATE.md
     - Authorization Scope: legal/AUTHORIZATION_SCOPE.md
-    - Executive Summary: templates/executive-summary-template.md
-    - Technical Findings: templates/technical-findings-template.md
-    - Remediation Roadmap: templates/remediation-roadmap-template.md
+    - Executive Summary: report-templates/executive-summary-template.md
+    - Technical Findings: report-templates/technical-findings-template.md
+    - Remediation Roadmap: report-templates/remediation-roadmap-template.md
   - Resources:
     - Vendor Advisories: vendors/README.md
     - Tools: tools.md
