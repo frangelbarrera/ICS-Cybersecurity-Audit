@@ -5,16 +5,15 @@
 
 ![](docs/images/1.png)
 
+Industrial Control Systems Security Methodology & Best Practices | Industrial Cybersecurity Researcher
+
+Creating safer industrial environments through ethical research and proven methodologies
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg)](https://www.isa.org/)
 [![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg)](https://csrc.nist.gov/pubs/sp/800/82/r3/final)
 [![Last Updated](https://img.shields.io/badge/Updated-June%202026-brightgreen.svg)](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/pulls)
-
-Industrial Control Systems Security Methodology & Best Practices | Industrial Cybersecurity Researcher
-
-Creating safer industrial environments through ethical research and proven methodologies
-
 
 ---
 
