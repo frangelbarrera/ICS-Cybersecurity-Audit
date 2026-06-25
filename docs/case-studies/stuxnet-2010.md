@@ -22,7 +22,7 @@
 | :---: | :--- | :--- |
 | T0847 | Replication Through Removable Media | Used LNK vulnerability (MS10-046) to propagate via USB drives -- the primary infection vector into the air-gapped Natanz network |
 | T0866 | Exploitation of Remote Services | Exploited MS08-067 (Windows Server Service) and MS10-061 (Print Spooler) for network propagation |
-| T0821 | Exploit Public-Facing Application | Exploited MS10-073 (Win32k Keyboard Layout) for privilege escalation |
+| T0890 | Exploitation for Privilege Escalation | Exploited MS10-073 (Win32k Keyboard Layout) for local privilege escalation to gain SYSTEM-level access on infected hosts |
 | T0889 | Modify Program | Modified PLC logic on S7-300/S7-400 controllers to manipulate centrifuge speeds |
 | T0831 | Manipulate I/O Image | Intercepted and modified I/O data between PLC and SCADA to hide the attack from operators |
 | T0811 | Data from Information Repositories | Stole PLC project files and Step 7 project data from infected engineering workstations |

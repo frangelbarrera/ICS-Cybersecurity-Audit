@@ -12,7 +12,7 @@
 
 **Impact**: 225,000 customers lost power for 1-6 hours. 30 substations were taken offline. Control center SCADA systems were rendered inoperable for months due to KillDisk destruction. The attack demonstrated that a nation-state actor could cause physical disruption through cyber means alone.
 
-**Attribution**: The US Department of Homeland Security and Ukrainian authorities attributed the attack to the Russian state-sponsored threat group "Sandworm" (also known as Voodoo Bear, APT28-adjacent). The group used BlackEnergy3 malware, a variant previously observed in other attacks against Ukrainian infrastructure.
+**Attribution**: The US Department of Homeland Security and Ukrainian authorities attributed the attack to the Russian state-sponsored threat group "Sandworm" (Unit 74455 of Russia's GRU Main Intelligence Directorate, also tracked as Voodoo Bear and IRIDIUM -- a separate GRU unit, distinct from APT28/Fancy Bear). The group used BlackEnergy3 malware, a variant previously observed in other attacks against Ukrainian infrastructure.
 
 ---
 

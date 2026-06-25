@@ -180,11 +180,13 @@ This document maps every technique in the MITRE ATT&CK for ICS matrix to the 5-p
 | T0809 | Data Destruction | Backup integrity verification; restore procedure testing; offline backup storage audit; detect mass file deletion on OT hosts | Phase 3, 4 | SR 4.1, SR 3.2 | 6.2.4, 6.3.1 | **Critical** |
 | T0814 | Denial of Service | Network resilience testing; verify redundant paths and failover; traffic rate limiting on OT devices; DDoS protection | Phase 4 | SR 4.1, SR 3.1 | 6.2.5, 6.2.6 | **Critical** |
 | T0816 | Device Restart/Shutdown | Monitor for unexpected device reboots or shutdowns; UPS health monitoring; physical security for power controls | Phase 2, 4 | SR 4.1, SR 4.2 | 6.5.1 | **Critical** |
-| T0835 | Manipulate I/O Image | Compare I/O image against expected values; I/O forcing detection; monitor for unexpected changes to I/O mapping | Phase 4 | SR 3.1, SR 4.1 | 6.2.4 | **Critical** |
+| T0835 | Manipulate I/O Image | Compare I/O image against expected values; I/O forcing detection; monitor for unexpected changes to I/O mapping. Note: distinct from process parameter modification -- this technique manipulates the I/O memory table to disrupt device function, not the process setpoints. | Phase 4 | SR 3.1, SR 4.1 | 6.2.4 | **Critical** |
 | T0838 | Modify Alarm Settings | Alarm configuration baseline comparison; change management for alarm parameters; restrict alarm configuration to authorized personnel | Phase 3, 4 | SR 2.1, SR 2.8 | 6.2.1, 6.3.3 | **Critical** |
 | T1693 | Modify Firmware | See Persistence. Firmware integrity verification; detect unauthorized firmware modifications | Phase 3, 4 | SR 1.2, SR 3.2 | 6.2.3, 6.2.4 | **Critical** |
 | T0851 | Rootkit | See Evasion. Hardware-based integrity verification; periodic firmware comparison against known-good | Phase 3, 4 | SR 1.2, SR 3.2 | 6.2.4 | **Critical** |
 | T0881 | Service Stop | Monitor OT service status; verify automatic service recovery is configured; alert on unexpected service termination | Phase 3, 4 | SR 4.1, SR 2.8 | 6.3.1, 6.3.3 | **Critical** |
+| T0804 | Block Command Message | Prevents operator commands from reaching field devices, blocking legitimate control actions during incidents; verify command delivery integrity and redundant control paths | Phase 4 | SR 3.1, SR 4.1 | 6.2.4, 6.2.5 | **Critical** |
+| T0805 | Block Reporting Message | Suppresses alarm and status reporting from OT devices, preventing operators from detecting abnormal conditions; verify alarm delivery integrity and independent monitoring paths | Phase 4 | SR 3.1, SR 4.2 | 6.2.5, 6.3.3 | **Critical** |
 
 ---
 

@@ -25,7 +25,7 @@
 | T0840 | Network Connection Enumeration | Attackers performed reconnaissance on the IT network to identify high-value targets (file servers, domain controllers, backup systems) |
 | T0867 | Lateral Tool Transfer | Moved ransomware payload across IT systems using standard enterprise tools and protocols (SMB, RDP) |
 | T0881 | Service Stop | Disabled security tools and backup services before deploying ransomware |
-| T0809 | Data Destruction/Encryption | Ransomware encrypted data on approximately 100 GB of corporate IT systems |
+| T0809 | Data Destruction | Ransomware encrypted data on approximately 100 GB of corporate IT systems (the encryption constituted data destruction in this context) |
 | T0826 | Loss of Productivity and Revenue | The decision to proactively shut down OT operations caused financial losses estimated at tens of millions of dollars in ransom, lost revenue, and recovery costs |
 
 **Note**: Unlike the other case studies in this directory, Colonial Pipeline did NOT experience direct OT/SCADA compromise. The ATT&CK techniques used were primarily enterprise IT tactics applied to an organization where IT and OT were operationally interdependent. The shutdown was a defensive decision -- not an attacker action against OT systems.
