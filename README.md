@@ -11,9 +11,7 @@
 [![Last Updated](https://img.shields.io/badge/Updated-June%202026-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit )
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/pulls )
 
-Industrial Control Systems Security Methodology & Best Practices
-
-by [Frangel Barrera](https://github.com/frangelbarrera ) | Industrial Cybersecurity Researcher
+Industrial Control Systems Security Methodology & Best Practices | Industrial Cybersecurity Researcher
 
 Creating safer industrial environments through ethical research and proven methodologies
 
