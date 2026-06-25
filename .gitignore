@@ -35,3 +35,25 @@ package-lock.json
 # Temporary files
 *.tmp
 *.log
+
+# OT/ICS project files (never commit real project files)
+*.ap13
+*.ap14
+*.mwp
+*.ACD
+*.L5X
+*.L5K
+*.zap13
+*.zap14
+
+# PCAP files (may contain sensitive traffic captures)
+*.pcap
+*.pcapng
+*.cap
+
+# Wireshark profiles (personal config)
+wireshark_profiles/
+
+# ICS tool outputs
+*.scan
+*.asset

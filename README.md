@@ -12,9 +12,9 @@ by [Frangel Barrera](https://github.com/frangelbarrera ) | Industrial Cybersecur
 Creating safer industrial environments through ethical research and proven methodologies
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg )](https://creativecommons.org/licenses/by-nc-sa/4.0/ )
-[![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg )](https://www.isa.org/isa-iec-62443 )
-[![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg )](https://csrc.nist.gov/publications/detail/sp/800-82/rev-3/final )
-[![Last Updated](https://img.shields.io/badge/Updated-February%202026-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit )
+[![IEC 62443](https://img.shields.io/badge/Standard-IEC%2062443-red.svg )](https://www.isa.org/ )
+[![NIST SP 800-82](https://img.shields.io/badge/NIST-SP%20800--82-blue.svg )](https://csrc.nist.gov/pubs/sp/800/82/r3/final )
+[![Last Updated](https://img.shields.io/badge/Updated-June%202026-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit )
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg )](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/pulls )
 
 ---
@@ -120,6 +120,7 @@ S7Comm (Siemens)	Default ports, version fingerprinting	Enable Access Protection 
 EtherNet/IP	CIP protocol vulnerabilities	Use CIP Security, device-level authentication	
 OPC UA	Certificate management complexity	Implement proper PKI, disable anonymous access	
 PROFINET	LLDP information leakage	Disable unused features, control broadcast domains	
+BACnet/IP	No authentication, no encryption, UDP 47808	Implement BACnet/SC (Secure Connect), VLAN segmentation, disable BBMD on untrusted interfaces	
 
 ---
 
@@ -236,11 +237,39 @@ Network Segmentation Templates
 Example firewall rules for OT zones:
 
 ```bash
-# Allow only READ commands from SCADA to PLCs
-iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "12&0xFFFF=0x03" -j ACCEPT
+# Modbus TCP function code filtering via iptables u32
+# MBAP header = 7 bytes (TransactionID[2] + ProtocolID[2] + Length[2] + UnitID[1])
+# Function code is byte 7 of the MBAP header, located after IP + TCP headers
+#
+# Pattern breakdown:
+#   0>>22&0x3C    = IP header length (IHL * 4)
+#   @             = move pointer to TCP header start
+#   12>>26&0x3C   = TCP header length (Data Offset * 4)
+#   @             = move pointer to TCP payload start (beginning of MBAP)
+#   7>>24&0xFF=0xNN = Modbus function code at MBAP offset 7 (0-indexed)
+#                     Note: >>24 extracts the MSB of the 4-byte u32 read,
+#                     which is byte 7 (function code) in network byte order
+#
+# LIMITATION: u32 assumes standard IP/TCP headers (no options).
+# For variable-length headers, use nfqueue with a Modbus-aware parser.
 
-# Block WRITE commands from external zones (Function Code 5,6,15,16)
-iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "12&0xFFFF=0x06" -j DROP
+# Allow Modbus READ commands (safe, non-intrusive operations)
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x01" -j ACCEPT  # FC 01: Read Coils
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x02" -j ACCEPT  # FC 02: Read Discrete Inputs
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x03" -j ACCEPT  # FC 03: Read Holding Registers
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x04" -j ACCEPT  # FC 04: Read Input Registers
+
+# Block Modbus WRITE commands (dangerous in unauthorized contexts)
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x05" -j DROP   # FC 05: Write Single Coil
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x06" -j DROP   # FC 06: Write Single Register
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x0F" -j DROP   # FC 15: Write Multiple Coils
+iptables -A FORWARD -p tcp --dport 502 -m u32 --u32 "0>>22&0x3C@12>>26&0x3C@7>>24&0xFF=0x10" -j DROP   # FC 16: Write Multiple Registers
+
+# Log all dropped Modbus traffic for audit trail
+iptables -A FORWARD -p tcp --dport 502 -j LOG --log-prefix "MODBUS_DROP: " --log-level 4
+
+# Default deny for unclassified Modbus traffic
+iptables -A FORWARD -p tcp --dport 502 -j DROP
 ```
 
 ---
@@ -324,9 +353,9 @@ Contribution Process:
 
 Framework Versioning
 
-- v1.0 (Current): Initial methodology release
-- v1.1 (Q1 2025): Add IEC 61850 and DNP3 guides
-- v2.0 (Q3 2025): MITRE ATT&CK for ICS v14 mapping
+- v1.0 (Current): Initial methodology release — completed
+- v1.1 (Q3 2026): MITRE ATT&CK for ICS v16 mapping, expanded compliance checklists, DNP3 protocol guide
+- v2.0 (Q1 2027): Automation scripts, incident response playbook, vendor-specific hardening guides
 
 ---
 
