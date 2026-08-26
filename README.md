@@ -154,6 +154,25 @@ Network Devices:
 - Industrial firewall rule templates (Tofino, Palo Alto, Fortinet)
 - Managed switch security: Port security, VLANs, DHCP snooping
 
+Safety-Critical PLC Hardening — IEC 62061 Environments
+
+When PLCs perform Safety-Related Control Functions (SRCFs) classified at Safety Integrity Level 1, 2, or 3 under IEC 62061, standard hardening approaches require modification to avoid compromising the existing safety case.
+
+**Key constraints that differ from standard PLC hardening:**
+
+**Patching:** Never apply patches to safety PLCs without vendor confirmation the patch has been tested against your specific firmware version and safety function configuration. All patches require dual sign-off from the Safety Responsible Person and Cybersecurity Lead. A full SIL validation check must be completed before returning the system to operational status after any patch.
+
+**MFA and authentication:** Authentication delays must not be introduced on emergency access pathways to safety functions. Document explicit MFA exceptions for emergency operator interfaces with compensating controls and risk-acceptance sign-off.
+
+**Active monitoring:** Do not use active network scanning within the safety OT network segment. Active scan traffic can interrupt safety PLC communications and affect safety function behaviour. Use passive monitoring exclusively — traffic mirroring and span ports only — within the safety boundary.
+
+**Change management:** All changes to safety PLC logic require dual authorisation from both the Safety Responsible Person and the Cybersecurity Lead before implementation. Maintain version control for all PLC logic with a complete change history and a verified golden copy.
+
+**Applicable environments:** Nuclear, radiological, scientific research infrastructure, chemical processing, pharmaceutical, advanced manufacturing, and any environment where PLCs, safety interlocks, or personnel protection systems are classified at SIL 1 to 3.
+
+> **Reference:** IEC 62061:2021 — Safety of Machinery: Functional Safety of Safety-Related Control Systems. For alignment with cybersecurity governance frameworks, see also NCSC Cyber Assessment Framework (CAF) Objective B and IEC 62443-3-3 SR 5.1.
+
+
 3. Asset Integrity Framework
 
 Methodology for ensuring software integrity:
@@ -290,6 +309,16 @@ NIST SP 800-82r3 Alignment
 - Section 5: Risk Management (covered in Phase 1)
 - Section 6: ICS Security Architecture (covered in ZT-OT model)
 - Section 7: Security Controls (mapped to hardening guides)
+
+IEC 62061:2021 Alignment — Safety-Critical OT Environments
+
+| Requirement | Framework Section | Audit Evidence |
+|---|---|---|
+| Section 5.4 — Hardware Architecture | Phase 3 | Physical and logical segregation confirmed between safety-related and non-safety systems |
+| Section 6 — SRCF Specification | Phase 1 | Safety-Related Control Functions documented with SIL attainment targets and PFHd calculations |
+| Section 6.7 — Systematic Capability | Phase 3 | Access to safety PLC logic restricted; all changes require dual authorisation from Safety and Cybersecurity representatives |
+| Section 8 — Validation | Phase 4 | Cybersecurity controls verified not to compromise SIL attainment level or SRCF response time |
+| Section 9 — Operation and Maintenance | Phase 5 | Post-incident SIL validation check procedure documented before system return to operational status |
 
 ---
 
