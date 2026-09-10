@@ -154,23 +154,23 @@ Network Devices:
 - Industrial firewall rule templates (Tofino, Palo Alto, Fortinet)
 - Managed switch security: Port security, VLANs, DHCP snooping
 
-Safety-Critical PLC Hardening — IEC 62061 Environments
+### Safety-Critical PLC Hardening — IEC 62061 Machinery Environments
 
-When PLCs perform Safety-Related Control Functions (SRCFs) classified at Safety Integrity Level 1, 2, or 3 under IEC 62061, standard hardening approaches require modification to avoid compromising the existing safety case.
+When safety-related control systems for machinery perform safety functions assigned to SIL 1, SIL 2, or SIL 3 under IEC 62061, cybersecurity and hardening measures should be assessed against the existing functional-safety design, validation evidence, and safety case. Controls should be tailored so that they do not adversely affect required safety functions, response times, diagnostics, or availability.
 
 **Key constraints that differ from standard PLC hardening:**
 
-**Patching:** Never apply patches to safety PLCs without vendor confirmation the patch has been tested against your specific firmware version and safety function configuration. All patches require dual sign-off from the Safety Responsible Person and Cybersecurity Lead. A full SIL validation check must be completed before returning the system to operational status after any patch.
+**Patching:** Do not apply patches to safety-related PLCs until the patch has been assessed for the specific hardware, firmware, safety-function configuration, and operating environment. Test patches in a representative environment where feasible, obtain vendor or integrator guidance, use formal change control, and complete the functional-safety impact assessment and required validation before returning the system to operation. Local governance may require approval from both the safety and cybersecurity authorities.
 
-**MFA and authentication:** Authentication delays must not be introduced on emergency access pathways to safety functions. Document explicit MFA exceptions for emergency operator interfaces with compensating controls and risk-acceptance sign-off.
+**MFA and authentication:** Authentication and access-control mechanisms should be designed so that they do not prevent a safety function from reaching its required safe state or delay an essential emergency action. Do not create blanket MFA exceptions. Where an emergency or break-glass pathway is required, define it through the safety and security risk assessments, protect it with compensating controls, log and review its use, and obtain formal risk acceptance from the responsible authority.
 
-**Active monitoring:** Do not use active network scanning within the safety OT network segment. Active scan traffic can interrupt safety PLC communications and affect safety function behaviour. Use passive monitoring exclusively — traffic mirroring and span ports only — within the safety boundary.
+**Monitoring and assessment:** Treat active scanning inside safety-related OT segments as a controlled activity requiring documented authorization, risk assessment, vendor or asset-owner input, and an approved test plan. Prefer passive monitoring and traffic mirroring where they provide sufficient visibility. If active testing is necessary, validate its safety impact, restrict its scope and timing, and use the least intrusive method available.
 
-**Change management:** All changes to safety PLC logic require dual authorisation from both the Safety Responsible Person and the Cybersecurity Lead before implementation. Maintain version control for all PLC logic with a complete change history and a verified golden copy.
+**Change management:** Changes to safety PLC logic should follow the site’s functional-safety and cybersecurity change-control process, including documented authorization by the responsible safety authority and appropriate cybersecurity review. Maintain version control, a complete change history, tested rollback procedures, and a verified baseline or golden copy of approved PLC logic.
 
-**Applicable environments:** Nuclear, radiological, scientific research infrastructure, chemical processing, pharmaceutical, advanced manufacturing, and any environment where PLCs, safety interlocks, or personnel protection systems are classified at SIL 1 to 3.
+**Applicable scope:** Use this guidance primarily for machinery and coordinated machinery systems whose safety-related control systems fall within the scope of IEC 62061. For process industries, nuclear or radiological facilities, chemical plants, pharmaceutical operations, and other specialized sectors, identify and apply the sector-specific functional-safety and cybersecurity standards required by the responsible authority. Do not treat IEC 62061 as a universal compliance basis for every SIL-rated OT environment.
 
-> **Reference:** IEC 62061:2021 — Safety of Machinery: Functional Safety of Safety-Related Control Systems. For alignment with cybersecurity governance frameworks, see also NCSC Cyber Assessment Framework (CAF) Objective B and IEC 62443-3-3 SR 5.1.
+> **References:** IEC 62061:2021, including its requirements for functional-safety planning, security aspects, periodic testing, software, and validation. For the interaction between functional safety and cybersecurity, consult the applicable guidance such as IEC TR 63074, IEC 62443, NIST SP 800-82, and the NCSC Cyber Assessment Framework where relevant. These references should be treated as complementary; none should be interpreted as replacing the applicable machinery, process-safety, or sector-specific requirements.
 
 
 3. Asset Integrity Framework
@@ -312,13 +312,16 @@ NIST SP 800-82r3 Alignment
 
 IEC 62061:2021 Alignment — Safety-Critical OT Environments
 
-| Requirement | Framework Section | Audit Evidence |
+| IEC 62061 topic | Framework Section | Example Audit Evidence |
 |---|---|---|
-| Section 5.4 — Hardware Architecture | Phase 3 | Physical and logical segregation confirmed between safety-related and non-safety systems |
-| Section 6 — SRCF Specification | Phase 1 | Safety-Related Control Functions documented with SIL attainment targets and PFHd calculations |
-| Section 6.7 — Systematic Capability | Phase 3 | Access to safety PLC logic restricted; all changes require dual authorisation from Safety and Cybersecurity representatives |
-| Section 8 — Validation | Phase 4 | Cybersecurity controls verified not to compromise SIL attainment level or SRCF response time |
-| Section 9 — Operation and Maintenance | Phase 5 | Post-incident SIL validation check procedure documented before system return to operational status |
+| Functional-safety planning and configuration management | Phase 1 | Defined safety functions, responsible authorities, configuration baseline, lifecycle records, and change-control process |
+| Safety-related control-system design and parameters | Phase 1 / Phase 3 | Documented safety requirements, SIL targets, assumptions, diagnostics, response-time constraints, and supporting calculations |
+| Security aspects affecting safety-related control systems | Phase 3 / Phase 4 | Cybersecurity risks assessed against safety functions, network boundaries, access controls, monitoring approach, and documented safety impact |
+| Architecture, reliability, and diagnostics | Phase 3 | Hardware and software architecture, segregation rationale, redundancy, diagnostics, common-cause considerations, and availability constraints |
+| Software and logic management | Phase 3 / Phase 4 | Approved PLC logic baseline, version history, independent review where required, backup and rollback evidence, and tested change procedure |
+| Validation and periodic testing | Phase 4 / Phase 5 | Validation plan, test records, periodic-test schedule, restoration criteria, and evidence that cybersecurity controls do not compromise safety performance |
+
+IEC 62061 clause numbers and terminology should be checked against the licensed edition and applicable amendment before being used as normative compliance claims. This framework provides audit guidance and evidence examples; it does not certify SIL attainment or replace a formal functional-safety assessment.
 
 ---
 
