@@ -440,3 +440,7 @@ This framework synthesizes knowledge from:
 Special thanks to the ethical hacking community for advancing defensive security.
 
 ---
+
+## Tools classification
+
+See [docs/tools-classification.md](docs/tools-classification.md).
