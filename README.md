@@ -443,4 +443,4 @@ Special thanks to the ethical hacking community for advancing defensive security
 
 ## Tools classification
 
-See [docs/tools-classification.md](docs/tools-classification.md).
+See the [tools classification](https://github.com/frangelbarrera/ICS-Cybersecurity-Audit/blob/main/docs/tools-classification.md).
